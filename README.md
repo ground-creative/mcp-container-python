@@ -48,7 +48,6 @@ from utils.application.logger import logger # Use to add logging capabilities
 from mcp.server.fastmcp import Context # Use `ctx: Context` as function param to get mcp context
 from utils.application.global_state import global_state # Use to add and read global vars
 
-@mcp.tool()
 def add_numbers_tool(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
