@@ -187,7 +187,7 @@ def some_tool():
     global_state.set("some_var", "somevalue", True) # The last parameter edits value if key already exists when set to true
 ```
 
-## Adding environment variables
+## Using environment variables
 
 To get environment variables added in the .env, use `get_env_variable` utility:
 
