@@ -143,7 +143,5 @@ middlewares/*
 !middlewares/api
 middlewares/api/*
 !middlewares/api/CheckAccessMiddleware.py
-mcp_server/*
-!mcp_server/tools
 mcp_server/tools/*
 !mcp_server/tools/.gitkeep
