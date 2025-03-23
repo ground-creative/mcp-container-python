@@ -75,7 +75,7 @@ pip install -r requirements.txt
 
 ## Adding Middleware
 
-1. Create middleware in `middlewares/api` folder as shown in the example:
+1. Create middleware class in `middlewares/api` folder as shown in the example:
 
 ```
 # middlewares/MyMiddleware.py
@@ -155,7 +155,7 @@ class MyMiddleware(BaseHTTPMiddleware):
 ]
 ```
 
-The CheckAccessMiddleware can be used this way:
+2. Create file `config/middlewares.json` if it does not exist and include the middleware CheckAccessMiddleware
 
 ```
 {
@@ -171,7 +171,23 @@ The CheckAccessMiddleware can be used this way:
 }
 ```
 
-get_keys_func is optional, it's possible to create a custom function to match authentication keys against a different storage engine.
+3. Include `X-API-KEY` paramater in request headers
+
+```
+# Example using mcp-proxy
+
+"mysql-tools": {
+    "command": "mcp-proxy",
+    "args": [
+        "http://localhost:8000/sse",
+        "--headers",
+        "X-API-KEY",
+        "1234567890"
+    ],
+}
+```
+
+Note: get_keys_func is optional, it's possible to create a custom function to match authentication keys against a different storage engine.
 
 ## Using global variables
 
