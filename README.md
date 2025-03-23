@@ -7,7 +7,7 @@ This is a container that wraps fastmcp around a fastapi application. The wrapper
 1. Clone the repository
 
 ```
-git clone https://github.com/ground-creative/letstalk-backend.git
+git clone https://github.com/ground-creative/mcp-container-python.git
 ```
 
 2. Change environment variables in env.sample file and rename it to .env
