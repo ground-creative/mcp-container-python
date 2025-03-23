@@ -2,6 +2,15 @@
 
 This is a container that wraps fastmcp around a fastapi application. The wrapper adds the ability to use middleware and intercept requests, this way we can handle events such as authentication or validating request parameters.
 
+## Requirements
+
+Chrome browser is required to fetch web pages content:
+
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+```
+
 ## Installation
 
 1. Clone the repository
