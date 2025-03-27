@@ -29,10 +29,12 @@ def register_tools():
                 module = importlib.import_module(module_name)
                 for attr_name in dir(module):
                     attr = getattr(module, attr_name)
+                    # Check if the attribute is a callable function and not a class
                     if (
                         callable(attr)
                         and hasattr(attr, "__name__")
                         and "tool" in attr.__name__.lower()
+                        and not isinstance(attr, type)  # Ensure it's not a class
                     ):
                         mcp.tool()(attr)  # Register the tool dynamically
                         logger.info(f"🛠️  Registered tool: {attr.__name__}")
